@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Page Scraping",
+    "version": "0.0.1",
+    "description": "",
+    "browser_action": {
+        "default_title": "",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["scrape.js"]
+    }],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "http://*/*",
+        "https://*/*"
+    ]
+}
